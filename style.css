@@ -70,6 +70,7 @@ body {
   font-size: 3.6rem;
   letter-spacing: 0.25px;
   font-weight: 200;
+  margin-bottom: 0.1rem;
 }
 
 .feature-section__title {
@@ -104,6 +105,7 @@ body {
   box-shadow: 0 15px 30px -11px hsl(var(--clr-light-blue), 0.5);
   border-radius: 0.8rem;
   border-top: 4px solid;
+  background-color: hsl(var(--clr-white));
 }
 
 .card--green {
