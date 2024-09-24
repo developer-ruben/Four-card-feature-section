@@ -33,6 +33,7 @@ body {
   color: hsl(var(--clr-very-dark-blue));
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
+  background-color: hsl(var(--clr-very-light-gray));
 }
 
 p {
@@ -79,7 +80,7 @@ p {
 
 .features-section__title {
   margin-bottom: 1.6rem;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 3.6rem;
   letter-spacing: 0.25px;
 }
