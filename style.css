@@ -1,0 +1,284 @@
+/* FONTS */
+
+@font-face {
+  font-style: normal;
+  font-weight: 200;
+  src: url("./assets/fonts/Poppins/Poppins-ExtraLight.ttf");
+  font-family: "Poppins";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-family: "Poppins";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf");
+  font-family: "Poppins";
+}
+
+/* VARIABLES */
+
+:root {
+  --clr-red: 0, 78%, 62%;
+  --clr-cyan: 180, 62%, 55%;
+  --clr-orange: 34, 97%, 64%;
+  --clr-blue: 212, 86%, 64%;
+
+  --clr-very-dark-blue: 234, 12%, 34%;
+  --clr-grayish-blue: 229, 6%, 66%;
+  --clr-very-light-gray: 0, 0%, 98%;
+  --clr-light-blue: 213, 47%, 67%;
+
+  --text-preset-1-size: 3.6rem;
+  --text-preset-1-ls: 0.025rem;
+
+  --text-preset-2-size: 2rem;
+
+  --text-preset-3-size: 1.5rem;
+  --text-preset-3-height: 2.5rem;
+  --text-preset-3-ls: 0.01rem;
+
+  --text-preset-4-size: 1.3rem;
+  --text-preset-4-height: 2.3rem;
+  --text-preset-4-ls: 0.009rem;
+}
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* GENERAL */
+
+body {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--clr-slate-300));
+  padding: 3.2rem;
+  min-height: 100vh;
+  color: hsl(var(--clr-grayish-blue));
+  font-size: var(--text-preset-3-size);
+  font-size: var(--text-preset-4-size);
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  max-width: 1110px;
+}
+
+/* UTILITY */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* FEATURE SECTION */
+
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  padding: 8rem 0;
+}
+
+.feature-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+  text-align: center;
+}
+
+.feature-section__title {
+  max-width: 445px;
+  color: hsl(var(--clr-very-dark-blue));
+  font-weight: 200;
+  font-size: var(--text-preset-1-size);
+  letter-spacing: var(--text-preset-1-ls);
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.feature-section__text {
+  opacity: 0.5;
+  max-width: 540px;
+  color: hsl(var(--clr-very-dark-blue));
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-height);
+  letter-spacing: var(--text-preset-3-ls);
+}
+
+.feature-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.feature-section__col {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 30px -11px hsl(var(--clr-light-blue), 0.5);
+  border-top: 4px solid;
+  border-radius: 0.8rem;
+  padding: 3.2rem;
+}
+
+.feature--cyan {
+  border-top-color: hsl(var(--clr-cyan));
+}
+
+.feature--red {
+  border-top-color: hsl(var(--clr-red));
+}
+
+.feature--orange {
+  border-top-color: hsl(var(--clr-orange));
+}
+
+.feature--blue {
+  border-top-color: hsl(var(--clr-blue));
+}
+
+.feature__title {
+  margin-bottom: 0.6rem;
+  color: hsl(var(--clr-very-dark-blue));
+  font-weight: 600;
+  font-size: var(--text-preset-2-size);
+}
+
+.feature__text {
+  margin-bottom: 4rem;
+  font-size: var(--text-preset-4-size);
+  line-height: var(--text-preset-4-height);
+  letter-spacing: var(--text-preset-4-ls);
+}
+
+.feature__image {
+  margin-left: auto;
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.attribution__link {
+  color: hsl(var(--clr-very-dark-blue));
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.attribution__link:hover {
+  text-decoration: underline;
+}
+
+/* MEDIA QUREIES */
+
+@media screen and (max-width: 867px) {
+  .attribution {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --text-preset-1-size: 2.4rem;
+    --text-preset-1-ls: 0.017rem;
+
+    --text-preset-2-size: 2rem;
+
+    --text-preset-3-size: 1.5rem;
+    --text-preset-3-height: 2.5rem;
+    --text-preset-3-ls: 0.01rem;
+
+    --text-preset-4-size: 1.3rem;
+    --text-preset-4-height: 2.3rem;
+    --text-preset-4-ls: 0.009rem;
+  }
+
+  .feature-section {
+    gap: 7.6rem;
+    margin: 0 auto;
+    max-width: 311px;
+  }
+
+  .feature-section__header {
+    gap: 1.6rem;
+  }
+
+  .feature-section__grid {
+    grid-template-columns: 1fr;
+    gap: 2.3rem;
+  }
+
+  .feature-section__col {
+    gap: 2.3rem;
+  }
+
+  .feature {
+    padding: 2.8rem;
+  }
+
+  .feature__title {
+    margin-bottom: 0.1rem;
+  }
+
+  .feature__text {
+    margin-bottom: 3.3rem;
+  }
+
+  .feature__image {
+    width: 57px;
+    height: 57px;
+  }
+}
